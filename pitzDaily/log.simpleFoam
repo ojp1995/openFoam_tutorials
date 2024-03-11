@@ -1,0 +1,2696 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : simpleFoam
+Date   : Mar 04 2024
+Time   : 15:31:16
+Host   : popeye03
+PID    : 1668311
+I/O    : uncollated
+Case   : /home/user03/OpenFOAM/user03-v2312/run/pitzDaily
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+SIMPLE: convergence criteria
+    field p	 tolerance 0.01
+    field U	 tolerance 0.001
+    field "(k|epsilon|omega|f|v2)"	 tolerance 0.001
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kEpsilon
+RAS
+{
+    RASModel        kEpsilon;
+    turbulence      on;
+    printCoeffs     on;
+    Cmu             0.09;
+    C1              1.44;
+    C2              1.92;
+    C3              0;
+    sigmak          1;
+    sigmaEps        1.3;
+}
+
+No MRF models present
+
+No finite volume options present
+
+Starting time loop
+
+streamLine streamlines:
+    Employing velocity field U
+    automatic track length specified through number of sub cycles : 5
+
+Time = 1
+
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 0.0923277, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 0.0654045, No Iterations 2
+GAMG:  Solving for p, Initial residual = 1, Final residual = 0.043673, No Iterations 20
+time step continuity errors : sum local = 0.606765, global = -0.115478, cumulative = -0.115478
+smoothSolver:  Solving for epsilon, Initial residual = 0.198345, Final residual = 0.0123332, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 1, Final residual = 0.0644682, No Iterations 3
+ExecutionTime = 0.4 s  ClockTime = 0 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 10.6614 in cell 330 at location (-0.0113829 0.0140918 -1.83716e-20)
+
+Time = 2
+
+smoothSolver:  Solving for Ux, Initial residual = 0.518034, Final residual = 0.0413245, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.295038, Final residual = 0.0202907, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0481244, Final residual = 0.0023823, No Iterations 20
+time step continuity errors : sum local = 1.89134, global = -0.0397185, cumulative = -0.155197
+smoothSolver:  Solving for epsilon, Initial residual = 0.119633, Final residual = 0.00905715, No Iterations 2
+bounding epsilon, min: -48.5243 max: 6412.14 average: 64.1995
+smoothSolver:  Solving for k, Initial residual = 0.400826, Final residual = 0.0214464, No Iterations 3
+ExecutionTime = 0.49 s  ClockTime = 0 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 9.32167 in cell 335 at location (-0.00577621 0.0140918 -7.01398e-21)
+
+Time = 3
+
+smoothSolver:  Solving for Ux, Initial residual = 0.135177, Final residual = 0.00842096, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.228377, Final residual = 0.0221369, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.163498, Final residual = 0.00733742, No Iterations 8
+time step continuity errors : sum local = 1.57333, global = 0.134887, cumulative = -0.0203098
+smoothSolver:  Solving for epsilon, Initial residual = 0.0898354, Final residual = 0.00406978, No Iterations 2
+smoothSolver:  Solving for k, Initial residual = 0.171058, Final residual = 0.011619, No Iterations 3
+ExecutionTime = 0.55 s  ClockTime = 0 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 8.85387 in cell 321 at location (-0.0020451 0.0120018 2.69182e-20)
+
+Time = 4
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0700917, Final residual = 0.00450837, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.1146, Final residual = 0.0104105, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.138796, Final residual = 0.00596455, No Iterations 10
+time step continuity errors : sum local = 0.667422, global = 0.0318053, cumulative = 0.0114955
+smoothSolver:  Solving for epsilon, Initial residual = 0.0678749, Final residual = 0.00452237, No Iterations 2
+smoothSolver:  Solving for k, Initial residual = 0.111065, Final residual = 0.00810576, No Iterations 3
+ExecutionTime = 0.61 s  ClockTime = 0 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 8.51607 in cell 8461 at location (0.000794572 0.01203 1.35514e-20)
+
+Time = 5
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0565407, Final residual = 0.00397962, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.101354, Final residual = 0.00663986, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.136792, Final residual = 0.00536172, No Iterations 5
+time step continuity errors : sum local = 0.376929, global = -0.0277553, cumulative = -0.0162598
+smoothSolver:  Solving for epsilon, Initial residual = 0.0450914, Final residual = 0.00356214, No Iterations 2
+smoothSolver:  Solving for k, Initial residual = 0.081993, Final residual = 0.00644245, No Iterations 3
+ExecutionTime = 0.67 s  ClockTime = 0 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 8.23939 in cell 8467 at location (0.00406495 0.0121463 1.71338e-20)
+
+Time = 6
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0499532, Final residual = 0.00379712, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0850162, Final residual = 0.00616291, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.106182, Final residual = 0.00493779, No Iterations 4
+time step continuity errors : sum local = 0.323427, global = -0.0295535, cumulative = -0.0458134
+smoothSolver:  Solving for epsilon, Initial residual = 0.0343036, Final residual = 0.00310988, No Iterations 2
+smoothSolver:  Solving for k, Initial residual = 0.0642299, Final residual = 0.00551589, No Iterations 3
+ExecutionTime = 0.73 s  ClockTime = 0 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 8.05382 in cell 8472 at location (0.00690878 0.0122473 -1.04578e-20)
+
+Time = 7
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0459225, Final residual = 0.00367108, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0759931, Final residual = 0.00572864, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0810695, Final residual = 0.0038307, No Iterations 4
+time step continuity errors : sum local = 0.254216, global = -0.025514, cumulative = -0.0713273
+smoothSolver:  Solving for epsilon, Initial residual = 0.0234909, Final residual = 0.00118126, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0550127, Final residual = 0.00516558, No Iterations 3
+ExecutionTime = 0.8 s  ClockTime = 0 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.91296 in cell 8476 at location (0.00926448 0.012331 1.4512e-21)
+
+Time = 8
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0423691, Final residual = 0.00354697, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0715627, Final residual = 0.00561027, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0685986, Final residual = 0.00313362, No Iterations 4
+time step continuity errors : sum local = 0.205609, global = -0.0218029, cumulative = -0.0931303
+smoothSolver:  Solving for epsilon, Initial residual = 0.0200847, Final residual = 0.00112084, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.049958, Final residual = 0.00482782, No Iterations 3
+ExecutionTime = 0.85 s  ClockTime = 0 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.79273 in cell 8481 at location (0.0123136 0.0124394 -1.76465e-20)
+
+Time = 9
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0395184, Final residual = 0.00340982, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0685124, Final residual = 0.00557297, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0613792, Final residual = 0.0027198, No Iterations 4
+time step continuity errors : sum local = 0.175625, global = -0.0186717, cumulative = -0.111802
+smoothSolver:  Solving for epsilon, Initial residual = 0.0189323, Final residual = 0.00103104, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0466528, Final residual = 0.00452677, No Iterations 3
+ExecutionTime = 0.91 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.74366 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 10
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0373154, Final residual = 0.00327296, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0657764, Final residual = 0.00552905, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0568454, Final residual = 0.00259037, No Iterations 4
+time step continuity errors : sum local = 0.164119, global = -0.0177399, cumulative = -0.129542
+smoothSolver:  Solving for epsilon, Initial residual = 0.017148, Final residual = 0.000943415, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0440392, Final residual = 0.00427559, No Iterations 3
+ExecutionTime = 0.96 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.80896 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 11
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0353409, Final residual = 0.00313532, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.06353, Final residual = 0.00546346, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0522865, Final residual = 0.00252624, No Iterations 4
+time step continuity errors : sum local = 0.157202, global = -0.0168334, cumulative = -0.146375
+smoothSolver:  Solving for epsilon, Initial residual = 0.0155761, Final residual = 0.000883173, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0419429, Final residual = 0.00405516, No Iterations 3
+ExecutionTime = 1.02 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.862 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 12
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0333904, Final residual = 0.00299696, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0617543, Final residual = 0.00538528, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0479507, Final residual = 0.00189427, No Iterations 5
+time step continuity errors : sum local = 0.115794, global = 0.0123133, cumulative = -0.134062
+smoothSolver:  Solving for epsilon, Initial residual = 0.0146626, Final residual = 0.000822602, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.040072, Final residual = 0.003864, No Iterations 3
+ExecutionTime = 1.08 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.92474 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 13
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0316079, Final residual = 0.00286185, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0601144, Final residual = 0.00528523, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.045344, Final residual = 0.00196115, No Iterations 4
+time step continuity errors : sum local = 0.118114, global = -0.010837, cumulative = -0.144899
+smoothSolver:  Solving for epsilon, Initial residual = 0.0138358, Final residual = 0.00074121, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0380951, Final residual = 0.00366134, No Iterations 3
+ExecutionTime = 1.14 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.93464 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 14
+
+smoothSolver:  Solving for Ux, Initial residual = 0.029975, Final residual = 0.00273381, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0582561, Final residual = 0.00519078, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0434259, Final residual = 0.0019602, No Iterations 4
+time step continuity errors : sum local = 0.116186, global = -0.00989117, cumulative = -0.15479
+smoothSolver:  Solving for epsilon, Initial residual = 0.013125, Final residual = 0.000690073, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0362756, Final residual = 0.00344772, No Iterations 3
+ExecutionTime = 1.2 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.95694 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 15
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0285012, Final residual = 0.00261491, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0565163, Final residual = 0.00509406, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0413283, Final residual = 0.0019297, No Iterations 4
+time step continuity errors : sum local = 0.112994, global = -0.0100383, cumulative = -0.164828
+smoothSolver:  Solving for epsilon, Initial residual = 0.0124876, Final residual = 0.000639616, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0348454, Final residual = 0.00332612, No Iterations 3
+ExecutionTime = 1.26 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.97314 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 16
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0270829, Final residual = 0.00250206, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0549321, Final residual = 0.00499298, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0391284, Final residual = 0.00184665, No Iterations 4
+time step continuity errors : sum local = 0.107042, global = -0.00949242, cumulative = -0.174321
+smoothSolver:  Solving for epsilon, Initial residual = 0.0119815, Final residual = 0.000595742, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0332439, Final residual = 0.00312073, No Iterations 3
+ExecutionTime = 1.31 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.98313 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 17
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0257643, Final residual = 0.00239527, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0534455, Final residual = 0.00489865, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0374387, Final residual = 0.00179188, No Iterations 4
+time step continuity errors : sum local = 0.102904, global = -0.00919896, cumulative = -0.18352
+smoothSolver:  Solving for epsilon, Initial residual = 0.0113382, Final residual = 0.000547483, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.031865, Final residual = 0.00297055, No Iterations 3
+ExecutionTime = 1.37 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.98746 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 18
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0245304, Final residual = 0.00229218, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0520121, Final residual = 0.00481245, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0361592, Final residual = 0.00177699, No Iterations 4
+time step continuity errors : sum local = 0.100865, global = -0.0088452, cumulative = -0.192365
+smoothSolver:  Solving for epsilon, Initial residual = 0.0109047, Final residual = 0.000513391, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0307281, Final residual = 0.00282306, No Iterations 3
+ExecutionTime = 1.43 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.98716 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 19
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0233742, Final residual = 0.00219288, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0507518, Final residual = 0.00473642, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0350028, Final residual = 0.00129271, No Iterations 5
+time step continuity errors : sum local = 0.0725288, global = 0.00545074, cumulative = -0.186914
+smoothSolver:  Solving for epsilon, Initial residual = 0.0104083, Final residual = 0.000480952, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0297076, Final residual = 0.00271292, No Iterations 3
+ExecutionTime = 1.49 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.99387 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 20
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0222862, Final residual = 0.00209517, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0496567, Final residual = 0.00466222, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0342531, Final residual = 0.00160973, No Iterations 4
+time step continuity errors : sum local = 0.0891964, global = 0.00380838, cumulative = -0.183106
+smoothSolver:  Solving for epsilon, Initial residual = 0.0100063, Final residual = 0.000454622, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0285725, Final residual = 0.00261262, No Iterations 3
+ExecutionTime = 1.55 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.98068 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 21
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0212364, Final residual = 0.00200174, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0485121, Final residual = 0.00459123, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0334519, Final residual = 0.00157165, No Iterations 4
+time step continuity errors : sum local = 0.0860133, global = 0.00713445, cumulative = -0.175971
+smoothSolver:  Solving for epsilon, Initial residual = 0.00954707, Final residual = 0.000418053, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.027447, Final residual = 0.00246636, No Iterations 3
+ExecutionTime = 1.6 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.96685 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 22
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0202439, Final residual = 0.00191439, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0473504, Final residual = 0.00452024, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.032917, Final residual = 0.00123903, No Iterations 5
+time step continuity errors : sum local = 0.0669933, global = -0.00601849, cumulative = -0.18199
+smoothSolver:  Solving for epsilon, Initial residual = 0.0091509, Final residual = 0.000397999, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.026425, Final residual = 0.00231157, No Iterations 3
+ExecutionTime = 1.66 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.93493 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 23
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0192866, Final residual = 0.00182866, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0461217, Final residual = 0.00443418, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0321553, Final residual = 0.00103702, No Iterations 5
+time step continuity errors : sum local = 0.0552279, global = -0.00443989, cumulative = -0.18643
+smoothSolver:  Solving for epsilon, Initial residual = 0.00877377, Final residual = 0.000369993, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0256881, Final residual = 0.00223679, No Iterations 3
+ExecutionTime = 1.72 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.91345 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 24
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0183524, Final residual = 0.00174402, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0449534, Final residual = 0.00435072, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0315369, Final residual = 0.0010472, No Iterations 5
+time step continuity errors : sum local = 0.0548979, global = -0.00494034, cumulative = -0.19137
+smoothSolver:  Solving for epsilon, Initial residual = 0.0084157, Final residual = 0.000838441, No Iterations 2
+smoothSolver:  Solving for k, Initial residual = 0.0250144, Final residual = 0.00219738, No Iterations 3
+ExecutionTime = 1.78 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.88638 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 25
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0174739, Final residual = 0.00166381, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0437368, Final residual = 0.00426088, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0309867, Final residual = 0.00106503, No Iterations 5
+time step continuity errors : sum local = 0.0552223, global = -0.00496542, cumulative = -0.196336
+smoothSolver:  Solving for epsilon, Initial residual = 0.00819579, Final residual = 0.00034918, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0244004, Final residual = 0.00212014, No Iterations 3
+ExecutionTime = 1.84 s  ClockTime = 1 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.85364 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 26
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0166628, Final residual = 0.00158856, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0424842, Final residual = 0.0041607, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0304771, Final residual = 0.00106125, No Iterations 5
+time step continuity errors : sum local = 0.0542075, global = -0.00454121, cumulative = -0.200877
+smoothSolver:  Solving for epsilon, Initial residual = 0.00790595, Final residual = 0.000781877, No Iterations 2
+smoothSolver:  Solving for k, Initial residual = 0.0237433, Final residual = 0.00204136, No Iterations 3
+ExecutionTime = 1.9 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.81619 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 27
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0158307, Final residual = 0.00151124, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0412654, Final residual = 0.00406109, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0300284, Final residual = 0.00102775, No Iterations 5
+time step continuity errors : sum local = 0.0517587, global = -0.00445453, cumulative = -0.205331
+smoothSolver:  Solving for epsilon, Initial residual = 0.00758611, Final residual = 0.000324165, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0231436, Final residual = 0.00200579, No Iterations 3
+ExecutionTime = 1.96 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.77279 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 28
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0150715, Final residual = 0.0014408, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0399889, Final residual = 0.00395335, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.02942, Final residual = 0.00100603, No Iterations 5
+time step continuity errors : sum local = 0.0499167, global = -0.00445693, cumulative = -0.209788
+smoothSolver:  Solving for epsilon, Initial residual = 0.00733551, Final residual = 0.000723382, No Iterations 2
+smoothSolver:  Solving for k, Initial residual = 0.0225925, Final residual = 0.00193364, No Iterations 3
+ExecutionTime = 2.01 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.72504 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 29
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0143038, Final residual = 0.0013687, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0387905, Final residual = 0.00384957, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0287269, Final residual = 0.00105712, No Iterations 5
+time step continuity errors : sum local = 0.0517644, global = -0.00595788, cumulative = -0.215746
+smoothSolver:  Solving for epsilon, Initial residual = 0.00707527, Final residual = 0.000303747, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0220462, Final residual = 0.00189838, No Iterations 3
+ExecutionTime = 2.08 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.67109 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 30
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0135973, Final residual = 0.00130281, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0375493, Final residual = 0.00373686, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0282596, Final residual = 0.00138274, No Iterations 4
+time step continuity errors : sum local = 0.0667248, global = 0.011648, cumulative = -0.204098
+smoothSolver:  Solving for epsilon, Initial residual = 0.00684707, Final residual = 0.000683975, No Iterations 2
+smoothSolver:  Solving for k, Initial residual = 0.0215759, Final residual = 0.00185097, No Iterations 3
+ExecutionTime = 2.14 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.63039 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 31
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0128731, Final residual = 0.0012338, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0363989, Final residual = 0.00362873, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0279111, Final residual = 0.00129433, No Iterations 5
+time step continuity errors : sum local = 0.0617143, global = -0.0105777, cumulative = -0.214676
+smoothSolver:  Solving for epsilon, Initial residual = 0.00658925, Final residual = 0.000286842, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0210632, Final residual = 0.00182143, No Iterations 3
+ExecutionTime = 2.19 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.54857 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 32
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0121978, Final residual = 0.00117071, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0352142, Final residual = 0.00351291, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0273372, Final residual = 0.00131317, No Iterations 4
+time step continuity errors : sum local = 0.061514, global = 0.00902315, cumulative = -0.205653
+smoothSolver:  Solving for epsilon, Initial residual = 0.0063942, Final residual = 0.000638391, No Iterations 2
+smoothSolver:  Solving for k, Initial residual = 0.0206106, Final residual = 0.00178922, No Iterations 3
+ExecutionTime = 2.25 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.50207 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 33
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0115185, Final residual = 0.00110575, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0341459, Final residual = 0.00340563, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0268667, Final residual = 0.00127939, No Iterations 5
+time step continuity errors : sum local = 0.0591432, global = -0.0100171, cumulative = -0.21567
+smoothSolver:  Solving for epsilon, Initial residual = 0.00618382, Final residual = 0.00027387, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0200559, Final residual = 0.00172999, No Iterations 3
+ExecutionTime = 2.3 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.41888 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 34
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0109012, Final residual = 0.00104802, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0329767, Final residual = 0.00328801, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0263852, Final residual = 0.00102483, No Iterations 5
+time step continuity errors : sum local = 0.0465146, global = -0.00645042, cumulative = -0.22212
+smoothSolver:  Solving for epsilon, Initial residual = 0.0060711, Final residual = 0.000266388, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0195503, Final residual = 0.00170606, No Iterations 3
+ExecutionTime = 2.37 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.35356 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 35
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0102964, Final residual = 0.000990846, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0318609, Final residual = 0.00317727, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0256727, Final residual = 0.000969237, No Iterations 5
+time step continuity errors : sum local = 0.0432779, global = -0.00527713, cumulative = -0.227397
+smoothSolver:  Solving for epsilon, Initial residual = 0.00583917, Final residual = 0.000253668, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.019051, Final residual = 0.00164502, No Iterations 3
+ExecutionTime = 2.42 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.28455 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 36
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00973235, Final residual = 0.000937943, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0308009, Final residual = 0.00307504, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0251489, Final residual = 0.000935405, No Iterations 5
+time step continuity errors : sum local = 0.0410844, global = -0.00437212, cumulative = -0.231769
+smoothSolver:  Solving for epsilon, Initial residual = 0.00563296, Final residual = 0.000247011, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0186514, Final residual = 0.00161776, No Iterations 3
+ExecutionTime = 2.48 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.21336 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 37
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00919782, Final residual = 0.000887677, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0297654, Final residual = 0.00297402, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0245871, Final residual = 0.00093668, No Iterations 5
+time step continuity errors : sum local = 0.0405134, global = -0.00436179, cumulative = -0.236131
+smoothSolver:  Solving for epsilon, Initial residual = 0.00551029, Final residual = 0.000242062, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0180811, Final residual = 0.0015777, No Iterations 3
+ExecutionTime = 2.54 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.14009 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 38
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00868818, Final residual = 0.000840016, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.028738, Final residual = 0.00184953, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0240702, Final residual = 0.000958999, No Iterations 5
+time step continuity errors : sum local = 0.0407621, global = -0.00446599, cumulative = -0.240597
+smoothSolver:  Solving for epsilon, Initial residual = 0.00533223, Final residual = 0.000238177, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0177718, Final residual = 0.00155601, No Iterations 3
+ExecutionTime = 2.6 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 7.06803 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 39
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00823037, Final residual = 0.00079716, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0274244, Final residual = 0.00274071, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0236194, Final residual = 0.000923201, No Iterations 5
+time step continuity errors : sum local = 0.0385991, global = -0.00266418, cumulative = -0.243261
+smoothSolver:  Solving for epsilon, Initial residual = 0.00522185, Final residual = 0.000233979, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0174729, Final residual = 0.00154542, No Iterations 3
+ExecutionTime = 2.67 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.99729 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 40
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0077483, Final residual = 0.000752253, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0267023, Final residual = 0.00172154, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.02296, Final residual = 0.000854068, No Iterations 5
+time step continuity errors : sum local = 0.0350585, global = -0.0025735, cumulative = -0.245835
+smoothSolver:  Solving for epsilon, Initial residual = 0.00509815, Final residual = 0.000231667, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.017071, Final residual = 0.00151401, No Iterations 3
+ExecutionTime = 2.73 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.92753 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 41
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00733849, Final residual = 0.000714433, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0256369, Final residual = 0.00165003, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0224414, Final residual = 0.000838971, No Iterations 5
+time step continuity errors : sum local = 0.0339382, global = -0.00278272, cumulative = -0.248618
+smoothSolver:  Solving for epsilon, Initial residual = 0.00495577, Final residual = 0.000228712, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0168229, Final residual = 0.0015077, No Iterations 3
+ExecutionTime = 2.79 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.85908 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 42
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00694225, Final residual = 0.000677904, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0248206, Final residual = 0.00159879, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0220164, Final residual = 0.000803506, No Iterations 5
+time step continuity errors : sum local = 0.0320216, global = -0.00288758, cumulative = -0.251505
+smoothSolver:  Solving for epsilon, Initial residual = 0.00483645, Final residual = 0.000226964, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0165362, Final residual = 0.00149666, No Iterations 3
+ExecutionTime = 2.85 s  ClockTime = 2 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.79355 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 43
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00657059, Final residual = 0.000643761, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.024199, Final residual = 0.00156065, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0215321, Final residual = 0.000761478, No Iterations 5
+time step continuity errors : sum local = 0.0299525, global = -0.00265419, cumulative = -0.254159
+smoothSolver:  Solving for epsilon, Initial residual = 0.00475435, Final residual = 0.000227576, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0161969, Final residual = 0.00149117, No Iterations 3
+ExecutionTime = 2.92 s  ClockTime = 3 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.73178 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 44
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00622618, Final residual = 0.00061235, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0236531, Final residual = 0.0015295, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0211692, Final residual = 0.000750196, No Iterations 5
+time step continuity errors : sum local = 0.0291436, global = -0.00214717, cumulative = -0.256306
+smoothSolver:  Solving for epsilon, Initial residual = 0.00466679, Final residual = 0.000227281, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0160526, Final residual = 0.00148671, No Iterations 3
+ExecutionTime = 3.02 s  ClockTime = 3 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.6739 in cell 10824 at location (0.287428 -0.016557 1.90217e-20)
+
+Time = 45
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00590388, Final residual = 0.000583046, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0232184, Final residual = 0.00150668, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.020824, Final residual = 0.00099027, No Iterations 4
+time step continuity errors : sum local = 0.0379934, global = 0.00130167, cumulative = -0.255005
+smoothSolver:  Solving for epsilon, Initial residual = 0.00457382, Final residual = 0.000227588, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0158146, Final residual = 0.00148203, No Iterations 3
+ExecutionTime = 3.11 s  ClockTime = 3 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63243 in cell 6120 at location (0.000264383 0.00163414 2.44041e-20)
+
+Time = 46
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00561638, Final residual = 0.000556835, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0228554, Final residual = 0.00149068, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0204468, Final residual = 0.00067451, No Iterations 5
+time step continuity errors : sum local = 0.0256174, global = -0.00162113, cumulative = -0.256626
+smoothSolver:  Solving for epsilon, Initial residual = 0.00450679, Final residual = 0.00022814, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0155551, Final residual = 0.00147399, No Iterations 3
+ExecutionTime = 3.22 s  ClockTime = 3 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63224 in cell 6120 at location (0.000264383 0.00163414 2.44041e-20)
+
+Time = 47
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00534075, Final residual = 0.000532021, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0225998, Final residual = 0.0014833, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0200478, Final residual = 0.000627706, No Iterations 5
+time step continuity errors : sum local = 0.0235596, global = 0.00110243, cumulative = -0.255524
+smoothSolver:  Solving for epsilon, Initial residual = 0.00444971, Final residual = 0.000229191, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0152411, Final residual = 0.0014523, No Iterations 3
+ExecutionTime = 3.33 s  ClockTime = 3 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63205 in cell 6120 at location (0.000264383 0.00163414 2.44041e-20)
+
+Time = 48
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00509484, Final residual = 0.000325339, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0223938, Final residual = 0.00147897, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0201658, Final residual = 0.000948191, No Iterations 4
+time step continuity errors : sum local = 0.0352129, global = 0.00227682, cumulative = -0.253247
+smoothSolver:  Solving for epsilon, Initial residual = 0.00435767, Final residual = 0.000228213, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0149647, Final residual = 0.00144281, No Iterations 3
+ExecutionTime = 3.44 s  ClockTime = 3 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63184 in cell 6120 at location (0.000264383 0.00163414 2.44041e-20)
+
+Time = 49
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00485792, Final residual = 0.000311523, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0223899, Final residual = 0.00148941, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0195581, Final residual = 0.000884548, No Iterations 4
+time step continuity errors : sum local = 0.0325966, global = 0.00279386, cumulative = -0.250453
+smoothSolver:  Solving for epsilon, Initial residual = 0.00429253, Final residual = 0.000228241, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0147288, Final residual = 0.00143168, No Iterations 3
+ExecutionTime = 3.54 s  ClockTime = 3 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63164 in cell 6120 at location (0.000264383 0.00163414 2.44041e-20)
+
+Time = 50
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00464572, Final residual = 0.000299143, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.022375, Final residual = 0.00149771, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0191366, Final residual = 0.000850774, No Iterations 4
+time step continuity errors : sum local = 0.0310723, global = 0.00180307, cumulative = -0.24865
+smoothSolver:  Solving for epsilon, Initial residual = 0.00423198, Final residual = 0.000228992, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0144842, Final residual = 0.00142357, No Iterations 3
+ExecutionTime = 3.64 s  ClockTime = 3 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63143 in cell 6120 at location (0.000264383 0.00163414 2.44041e-20)
+
+Time = 51
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00445466, Final residual = 0.000287871, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0224087, Final residual = 0.00150558, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0187421, Final residual = 0.00076281, No Iterations 4
+time step continuity errors : sum local = 0.0276006, global = -0.00133587, cumulative = -0.249986
+smoothSolver:  Solving for epsilon, Initial residual = 0.00415256, Final residual = 0.000226823, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0141855, Final residual = 0.0014064, No Iterations 3
+ExecutionTime = 3.75 s  ClockTime = 3 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63125 in cell 6120 at location (0.000264383 0.00163414 2.44041e-20)
+
+Time = 52
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00428081, Final residual = 0.000277445, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0224791, Final residual = 0.00151694, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0184511, Final residual = 0.00076254, No Iterations 4
+time step continuity errors : sum local = 0.0273454, global = -0.00267423, cumulative = -0.25266
+smoothSolver:  Solving for epsilon, Initial residual = 0.00409215, Final residual = 0.000227715, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.01396, Final residual = 0.001387, No Iterations 3
+ExecutionTime = 3.84 s  ClockTime = 3 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63107 in cell 6120 at location (0.000264383 0.00163414 2.44041e-20)
+
+Time = 53
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00412347, Final residual = 0.000267861, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0225246, Final residual = 0.00152488, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0181357, Final residual = 0.000695892, No Iterations 5
+time step continuity errors : sum local = 0.0247923, global = 0.00250574, cumulative = -0.250154
+smoothSolver:  Solving for epsilon, Initial residual = 0.00401694, Final residual = 0.00022681, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.013741, Final residual = 0.00137078, No Iterations 3
+ExecutionTime = 3.96 s  ClockTime = 4 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63091 in cell 6120 at location (0.000264383 0.00163414 2.44041e-20)
+
+Time = 54
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00396999, Final residual = 0.000258338, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0226025, Final residual = 0.00153331, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0177068, Final residual = 0.000717915, No Iterations 4
+time step continuity errors : sum local = 0.0253716, global = -0.00225658, cumulative = -0.252411
+smoothSolver:  Solving for epsilon, Initial residual = 0.0039406, Final residual = 0.000224306, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0134438, Final residual = 0.000778904, No Iterations 4
+ExecutionTime = 4.05 s  ClockTime = 4 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63074 in cell 6120 at location (0.000264383 0.00163414 2.44041e-20)
+
+Time = 55
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00381476, Final residual = 0.00024833, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.022647, Final residual = 0.00154056, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0174726, Final residual = 0.000664127, No Iterations 5
+time step continuity errors : sum local = 0.023302, global = 0.00265121, cumulative = -0.24976
+smoothSolver:  Solving for epsilon, Initial residual = 0.0039087, Final residual = 0.000227644, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.013174, Final residual = 0.000765627, No Iterations 4
+ExecutionTime = 4.14 s  ClockTime = 4 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63057 in cell 6120 at location (0.000264383 0.00163414 2.44041e-20)
+
+Time = 56
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00367543, Final residual = 0.000239299, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0226162, Final residual = 0.00154014, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0171782, Final residual = 0.0007895, No Iterations 4
+time step continuity errors : sum local = 0.0275322, global = -0.00316345, cumulative = -0.252923
+smoothSolver:  Solving for epsilon, Initial residual = 0.00384447, Final residual = 0.000228473, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0129928, Final residual = 0.000767942, No Iterations 4
+ExecutionTime = 4.25 s  ClockTime = 4 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63038 in cell 6120 at location (0.000264383 0.00163414 2.44041e-20)
+
+Time = 57
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00354341, Final residual = 0.000230651, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0225233, Final residual = 0.00153565, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0169343, Final residual = 0.000713395, No Iterations 5
+time step continuity errors : sum local = 0.0247087, global = 0.00282815, cumulative = -0.250095
+smoothSolver:  Solving for epsilon, Initial residual = 0.00379825, Final residual = 0.000230196, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0127244, Final residual = 0.000761402, No Iterations 4
+ExecutionTime = 4.36 s  ClockTime = 4 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63023 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 58
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00341732, Final residual = 0.000222243, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0224149, Final residual = 0.00152878, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0165512, Final residual = 0.000623548, No Iterations 5
+time step continuity errors : sum local = 0.0214713, global = 0.00279133, cumulative = -0.247303
+smoothSolver:  Solving for epsilon, Initial residual = 0.0037364, Final residual = 0.000229465, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0124542, Final residual = 0.000751726, No Iterations 4
+ExecutionTime = 4.47 s  ClockTime = 4 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.63006 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 59
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00329682, Final residual = 0.000213975, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0222505, Final residual = 0.00151961, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0162089, Final residual = 0.000790508, No Iterations 4
+time step continuity errors : sum local = 0.027064, global = -0.00371359, cumulative = -0.251017
+smoothSolver:  Solving for epsilon, Initial residual = 0.00365215, Final residual = 0.000227196, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0122096, Final residual = 0.000739446, No Iterations 4
+ExecutionTime = 4.56 s  ClockTime = 4 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62993 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 60
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00318261, Final residual = 0.000206011, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0219833, Final residual = 0.00150545, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0158624, Final residual = 0.000724324, No Iterations 5
+time step continuity errors : sum local = 0.024662, global = 0.00311308, cumulative = -0.247904
+smoothSolver:  Solving for epsilon, Initial residual = 0.00359379, Final residual = 0.000226352, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0119166, Final residual = 0.000731488, No Iterations 4
+ExecutionTime = 4.67 s  ClockTime = 4 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62978 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 61
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00306764, Final residual = 0.000198084, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0217391, Final residual = 0.00149152, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0153753, Final residual = 0.000612573, No Iterations 5
+time step continuity errors : sum local = 0.0207513, global = 0.00311266, cumulative = -0.244791
+smoothSolver:  Solving for epsilon, Initial residual = 0.00354902, Final residual = 0.000226748, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0116443, Final residual = 0.000718395, No Iterations 4
+ExecutionTime = 4.77 s  ClockTime = 4 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62965 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 62
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00295663, Final residual = 0.000190263, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0214704, Final residual = 0.00147614, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0148743, Final residual = 0.000573684, No Iterations 5
+time step continuity errors : sum local = 0.019348, global = 0.0031294, cumulative = -0.241662
+smoothSolver:  Solving for epsilon, Initial residual = 0.00345792, Final residual = 0.000222952, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.011451, Final residual = 0.000709822, No Iterations 4
+ExecutionTime = 4.87 s  ClockTime = 4 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62951 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 63
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00284641, Final residual = 0.000182696, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0211631, Final residual = 0.00145871, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0143933, Final residual = 0.000561009, No Iterations 5
+time step continuity errors : sum local = 0.018849, global = 0.00314007, cumulative = -0.238522
+smoothSolver:  Solving for epsilon, Initial residual = 0.00338564, Final residual = 0.000220878, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0111493, Final residual = 0.000697185, No Iterations 4
+ExecutionTime = 4.93 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62938 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 64
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0027423, Final residual = 0.000175431, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0208226, Final residual = 0.00143915, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0138783, Final residual = 0.00054375, No Iterations 5
+time step continuity errors : sum local = 0.018207, global = 0.00315081, cumulative = -0.235371
+smoothSolver:  Solving for epsilon, Initial residual = 0.00334981, Final residual = 0.000219889, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0109091, Final residual = 0.00068512, No Iterations 4
+ExecutionTime = 5 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62925 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 65
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00263965, Final residual = 0.000263493, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0204464, Final residual = 0.00141753, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0131406, Final residual = 0.000514865, No Iterations 5
+time step continuity errors : sum local = 0.0171836, global = 0.00292777, cumulative = -0.232443
+smoothSolver:  Solving for epsilon, Initial residual = 0.00324572, Final residual = 0.000216175, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0106949, Final residual = 0.000676985, No Iterations 4
+ExecutionTime = 5.06 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62915 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 66
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00255619, Final residual = 0.000254543, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0199269, Final residual = 0.00138471, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0128873, Final residual = 0.000506922, No Iterations 5
+time step continuity errors : sum local = 0.0168624, global = 0.00295268, cumulative = -0.229491
+smoothSolver:  Solving for epsilon, Initial residual = 0.00317805, Final residual = 0.000212698, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0105041, Final residual = 0.00066857, No Iterations 4
+ExecutionTime = 5.13 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62904 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 67
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00246981, Final residual = 0.000245648, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0194432, Final residual = 0.00135514, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0124862, Final residual = 0.000495537, No Iterations 5
+time step continuity errors : sum local = 0.0164355, global = 0.00280162, cumulative = -0.226689
+smoothSolver:  Solving for epsilon, Initial residual = 0.00310971, Final residual = 0.000209579, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0102346, Final residual = 0.00065361, No Iterations 4
+ExecutionTime = 5.19 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62895 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 68
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00238702, Final residual = 0.000236971, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0189976, Final residual = 0.00132726, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0120587, Final residual = 0.000467895, No Iterations 5
+time step continuity errors : sum local = 0.0154838, global = 0.00256176, cumulative = -0.224127
+smoothSolver:  Solving for epsilon, Initial residual = 0.00302638, Final residual = 0.000207263, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0100406, Final residual = 0.000646184, No Iterations 4
+ExecutionTime = 5.26 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62883 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 69
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00230806, Final residual = 0.00022886, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0185469, Final residual = 0.00129941, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0116687, Final residual = 0.000445529, No Iterations 5
+time step continuity errors : sum local = 0.0147096, global = 0.00236292, cumulative = -0.221764
+smoothSolver:  Solving for epsilon, Initial residual = 0.00295381, Final residual = 0.000203007, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00978736, Final residual = 0.00063109, No Iterations 4
+ExecutionTime = 5.32 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62874 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 70
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00223564, Final residual = 0.000221526, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0180902, Final residual = 0.00126934, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0112972, Final residual = 0.000432424, No Iterations 5
+time step continuity errors : sum local = 0.0142442, global = 0.00225527, cumulative = -0.219509
+smoothSolver:  Solving for epsilon, Initial residual = 0.00288268, Final residual = 0.000201718, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00956676, Final residual = 0.000622464, No Iterations 4
+ExecutionTime = 5.38 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62864 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 71
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00216852, Final residual = 0.000214914, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0176097, Final residual = 0.00123628, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0109594, Final residual = 0.000435965, No Iterations 5
+time step continuity errors : sum local = 0.0143283, global = 0.00223554, cumulative = -0.217273
+smoothSolver:  Solving for epsilon, Initial residual = 0.00280017, Final residual = 0.000198289, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00938005, Final residual = 0.000612849, No Iterations 4
+ExecutionTime = 5.45 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62856 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 72
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00210756, Final residual = 0.000209072, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0170959, Final residual = 0.00120159, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.010623, Final residual = 0.000438217, No Iterations 5
+time step continuity errors : sum local = 0.0143708, global = 0.00222163, cumulative = -0.215052
+smoothSolver:  Solving for epsilon, Initial residual = 0.00274225, Final residual = 0.000193901, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00918091, Final residual = 0.000606299, No Iterations 4
+ExecutionTime = 5.51 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62846 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 73
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00205171, Final residual = 0.000203757, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0165735, Final residual = 0.00116458, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0102796, Final residual = 0.000443863, No Iterations 5
+time step continuity errors : sum local = 0.0145232, global = 0.00219039, cumulative = -0.212861
+smoothSolver:  Solving for epsilon, Initial residual = 0.00266245, Final residual = 0.000189959, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00897931, Final residual = 0.000594104, No Iterations 4
+ExecutionTime = 5.57 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.6284 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 74
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00200302, Final residual = 0.00019898, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0160347, Final residual = 0.00112615, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00998784, Final residual = 0.000443012, No Iterations 5
+time step continuity errors : sum local = 0.0144587, global = 0.00212239, cumulative = -0.210739
+smoothSolver:  Solving for epsilon, Initial residual = 0.00260858, Final residual = 0.00018764, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00879139, Final residual = 0.000584958, No Iterations 4
+ExecutionTime = 5.64 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62831 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 75
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00195595, Final residual = 0.000194676, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0154661, Final residual = 0.00108647, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00968311, Final residual = 0.000442761, No Iterations 5
+time step continuity errors : sum local = 0.0144134, global = 0.00205786, cumulative = -0.208681
+smoothSolver:  Solving for epsilon, Initial residual = 0.00254596, Final residual = 0.000185547, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00867063, Final residual = 0.00058088, No Iterations 4
+ExecutionTime = 5.7 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62825 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 76
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00191405, Final residual = 0.000190845, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0149047, Final residual = 0.00104624, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00934998, Final residual = 0.000435238, No Iterations 5
+time step continuity errors : sum local = 0.0141322, global = 0.00195885, cumulative = -0.206722
+smoothSolver:  Solving for epsilon, Initial residual = 0.00247455, Final residual = 0.000181618, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00844615, Final residual = 0.000567603, No Iterations 4
+ExecutionTime = 5.76 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62817 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 77
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00187321, Final residual = 0.000119777, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0143291, Final residual = 0.00100531, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00910208, Final residual = 0.000448311, No Iterations 5
+time step continuity errors : sum local = 0.0145181, global = 0.00202897, cumulative = -0.204693
+smoothSolver:  Solving for epsilon, Initial residual = 0.0024045, Final residual = 0.000178027, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00829565, Final residual = 0.000560925, No Iterations 4
+ExecutionTime = 5.83 s  ClockTime = 5 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62811 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 78
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00183158, Final residual = 0.00011725, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0138643, Final residual = 0.000972791, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00870622, Final residual = 0.000434999, No Iterations 5
+time step continuity errors : sum local = 0.0140462, global = 0.00193676, cumulative = -0.202757
+smoothSolver:  Solving for epsilon, Initial residual = 0.00235521, Final residual = 0.000174806, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00815288, Final residual = 0.000553371, No Iterations 4
+ExecutionTime = 5.89 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62804 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 79
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00179599, Final residual = 0.000115121, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0133376, Final residual = 0.000935523, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00841097, Final residual = 0.000364273, No Iterations 6
+time step continuity errors : sum local = 0.0117262, global = -0.00215381, cumulative = -0.20491
+smoothSolver:  Solving for epsilon, Initial residual = 0.00229982, Final residual = 0.000173523, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00800405, Final residual = 0.000546255, No Iterations 4
+ExecutionTime = 5.96 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62797 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 80
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00176454, Final residual = 0.000113215, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0127923, Final residual = 0.000896277, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00809359, Final residual = 0.000358818, No Iterations 6
+time step continuity errors : sum local = 0.011509, global = -0.00198839, cumulative = -0.206899
+smoothSolver:  Solving for epsilon, Initial residual = 0.0022369, Final residual = 0.00016868, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00787308, Final residual = 0.000540809, No Iterations 4
+ExecutionTime = 6.03 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62791 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 81
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00173381, Final residual = 0.000111576, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0122148, Final residual = 0.000855724, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00785539, Final residual = 0.000380953, No Iterations 6
+time step continuity errors : sum local = 0.0121781, global = -0.00204872, cumulative = -0.208948
+smoothSolver:  Solving for epsilon, Initial residual = 0.00218125, Final residual = 0.000165456, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00772837, Final residual = 0.000532648, No Iterations 4
+ExecutionTime = 6.09 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62787 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 82
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00170565, Final residual = 0.00010998, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0116548, Final residual = 0.000815539, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00767209, Final residual = 0.000276802, No Iterations 7
+time step continuity errors : sum local = 0.0088125, global = 0.00106221, cumulative = -0.207885
+smoothSolver:  Solving for epsilon, Initial residual = 0.00214239, Final residual = 0.000165518, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00757238, Final residual = 0.000523562, No Iterations 4
+ExecutionTime = 6.17 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62781 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 83
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00167684, Final residual = 0.000108329, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0111562, Final residual = 0.000779103, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0074126, Final residual = 0.000361078, No Iterations 6
+time step continuity errors : sum local = 0.0114521, global = -0.00194216, cumulative = -0.209828
+smoothSolver:  Solving for epsilon, Initial residual = 0.00209076, Final residual = 0.000161593, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0074573, Final residual = 0.000518779, No Iterations 4
+ExecutionTime = 6.23 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62777 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 84
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00165163, Final residual = 0.000106896, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.010653, Final residual = 0.000744797, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00725109, Final residual = 0.000276277, No Iterations 7
+time step continuity errors : sum local = 0.00872504, global = 0.00104637, cumulative = -0.208781
+smoothSolver:  Solving for epsilon, Initial residual = 0.00205192, Final residual = 0.00015984, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00730322, Final residual = 0.000508376, No Iterations 4
+ExecutionTime = 6.29 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62772 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 85
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00162608, Final residual = 0.000105426, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0102055, Final residual = 0.000712937, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00700356, Final residual = 0.00026114, No Iterations 7
+time step continuity errors : sum local = 0.00821924, global = 0.000961012, cumulative = -0.20782
+smoothSolver:  Solving for epsilon, Initial residual = 0.00199183, Final residual = 0.000155903, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00717427, Final residual = 0.00050008, No Iterations 4
+ExecutionTime = 6.36 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62768 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 86
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00160329, Final residual = 0.000104121, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0097727, Final residual = 0.000683328, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0068156, Final residual = 0.000259483, No Iterations 7
+time step continuity errors : sum local = 0.00813683, global = 0.000923542, cumulative = -0.206897
+smoothSolver:  Solving for epsilon, Initial residual = 0.00193954, Final residual = 0.00015338, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00705171, Final residual = 0.000495298, No Iterations 4
+ExecutionTime = 6.43 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62764 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 87
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00158027, Final residual = 0.000102924, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00936908, Final residual = 0.000655364, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00663713, Final residual = 0.000265579, No Iterations 7
+time step continuity errors : sum local = 0.00830016, global = 0.000910256, cumulative = -0.205986
+smoothSolver:  Solving for epsilon, Initial residual = 0.00190171, Final residual = 0.000150784, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00693134, Final residual = 0.000487645, No Iterations 4
+ExecutionTime = 6.5 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.6276 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 88
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00155825, Final residual = 0.000101838, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00898416, Final residual = 0.000629251, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00649229, Final residual = 0.000271071, No Iterations 7
+time step continuity errors : sum local = 0.0084442, global = 0.000903809, cumulative = -0.205083
+smoothSolver:  Solving for epsilon, Initial residual = 0.0018604, Final residual = 0.000148134, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00681915, Final residual = 0.000479323, No Iterations 4
+ExecutionTime = 6.56 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62755 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 89
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00153777, Final residual = 0.000100829, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00863811, Final residual = 0.000604843, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00635063, Final residual = 0.000276244, No Iterations 7
+time step continuity errors : sum local = 0.00858009, global = 0.000898967, cumulative = -0.204184
+smoothSolver:  Solving for epsilon, Initial residual = 0.00181923, Final residual = 0.000146072, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0066855, Final residual = 0.000471806, No Iterations 4
+ExecutionTime = 6.63 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62753 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 90
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00151919, Final residual = 9.98474e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00830933, Final residual = 0.000582104, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00626107, Final residual = 0.000280038, No Iterations 7
+time step continuity errors : sum local = 0.00867284, global = 0.000895484, cumulative = -0.203288
+smoothSolver:  Solving for epsilon, Initial residual = 0.00177489, Final residual = 0.000141884, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00655358, Final residual = 0.000464357, No Iterations 4
+ExecutionTime = 6.71 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62748 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 91
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00150042, Final residual = 9.88824e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00799794, Final residual = 0.000560422, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00616232, Final residual = 0.000283201, No Iterations 7
+time step continuity errors : sum local = 0.0087491, global = 0.000892089, cumulative = -0.202396
+smoothSolver:  Solving for epsilon, Initial residual = 0.00173787, Final residual = 0.000140392, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00643153, Final residual = 0.000457128, No Iterations 4
+ExecutionTime = 6.77 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62746 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 92
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00148356, Final residual = 9.79461e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00771362, Final residual = 0.000540433, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0060707, Final residual = 0.000284746, No Iterations 7
+time step continuity errors : sum local = 0.00877627, global = 0.000889502, cumulative = -0.201506
+smoothSolver:  Solving for epsilon, Initial residual = 0.00169823, Final residual = 0.000137806, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00631322, Final residual = 0.000449737, No Iterations 4
+ExecutionTime = 6.84 s  ClockTime = 6 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62742 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 93
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00146591, Final residual = 9.70535e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00746097, Final residual = 0.000522001, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00599856, Final residual = 0.000286728, No Iterations 7
+time step continuity errors : sum local = 0.00881901, global = 0.000893697, cumulative = -0.200613
+smoothSolver:  Solving for epsilon, Initial residual = 0.00165314, Final residual = 0.000134919, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0062084, Final residual = 0.000444082, No Iterations 4
+ExecutionTime = 6.92 s  ClockTime = 7 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.6274 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 94
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00145151, Final residual = 9.61819e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00722967, Final residual = 0.000504946, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00593493, Final residual = 0.000286968, No Iterations 7
+time step continuity errors : sum local = 0.00880758, global = 0.000899596, cumulative = -0.199713
+smoothSolver:  Solving for epsilon, Initial residual = 0.00161535, Final residual = 0.000132209, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00609966, Final residual = 0.000435335, No Iterations 4
+ExecutionTime = 6.99 s  ClockTime = 7 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62736 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 95
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00143508, Final residual = 9.53184e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00702138, Final residual = 0.000489131, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00584867, Final residual = 0.00028714, No Iterations 7
+time step continuity errors : sum local = 0.00879715, global = 0.000908828, cumulative = -0.198804
+smoothSolver:  Solving for epsilon, Initial residual = 0.00158635, Final residual = 0.000130949, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00598888, Final residual = 0.000428521, No Iterations 4
+ExecutionTime = 7.07 s  ClockTime = 7 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62734 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 96
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00142077, Final residual = 9.44822e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0068252, Final residual = 0.00047469, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00579727, Final residual = 0.000287291, No Iterations 7
+time step continuity errors : sum local = 0.00878563, global = 0.000924388, cumulative = -0.19788
+smoothSolver:  Solving for epsilon, Initial residual = 0.00154511, Final residual = 0.00012764, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00587181, Final residual = 0.000421118, No Iterations 4
+ExecutionTime = 7.14 s  ClockTime = 7 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62731 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 97
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00140575, Final residual = 9.36601e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00665205, Final residual = 0.000461741, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00572969, Final residual = 0.000261684, No Iterations 8
+time step continuity errors : sum local = 0.00798951, global = -0.00125955, cumulative = -0.19914
+smoothSolver:  Solving for epsilon, Initial residual = 0.00151072, Final residual = 0.000125258, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00577448, Final residual = 0.000416097, No Iterations 4
+ExecutionTime = 7.22 s  ClockTime = 7 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62729 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 98
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00139372, Final residual = 9.27988e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00651324, Final residual = 0.000450852, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00566825, Final residual = 0.000264127, No Iterations 7
+time step continuity errors : sum local = 0.00804913, global = 0.000911773, cumulative = -0.198228
+smoothSolver:  Solving for epsilon, Initial residual = 0.00147914, Final residual = 0.000123288, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00565632, Final residual = 0.000407158, No Iterations 4
+ExecutionTime = 7.29 s  ClockTime = 7 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62726 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 99
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00137841, Final residual = 9.21317e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00635852, Final residual = 0.000439545, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00566564, Final residual = 0.000268317, No Iterations 8
+time step continuity errors : sum local = 0.0081682, global = -0.0012986, cumulative = -0.199526
+smoothSolver:  Solving for epsilon, Initial residual = 0.00144585, Final residual = 0.000120889, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00555456, Final residual = 0.000400494, No Iterations 4
+ExecutionTime = 7.37 s  ClockTime = 7 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62724 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 100
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00136686, Final residual = 9.12903e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00625259, Final residual = 0.000431343, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00558769, Final residual = 0.000271644, No Iterations 7
+time step continuity errors : sum local = 0.00825528, global = 0.000991315, cumulative = -0.198535
+smoothSolver:  Solving for epsilon, Initial residual = 0.00141207, Final residual = 0.000119091, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00543818, Final residual = 0.000392142, No Iterations 4
+ExecutionTime = 7.54 s  ClockTime = 7 s
+
+streamLine streamlines write:
+    seeded 10 particles
+    Tracks:10
+    Total samples:10777
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62721 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 101
+
+smoothSolver:  Solving for Ux, Initial residual = 0.001352, Final residual = 9.0633e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00614054, Final residual = 0.000423148, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00556946, Final residual = 0.000273009, No Iterations 8
+time step continuity errors : sum local = 0.0082886, global = -0.00133992, cumulative = -0.199875
+smoothSolver:  Solving for epsilon, Initial residual = 0.00137445, Final residual = 0.000115934, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00533298, Final residual = 0.000385139, No Iterations 4
+ExecutionTime = 8.03 s  ClockTime = 8 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.6272 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 102
+
+smoothSolver:  Solving for Ux, Initial residual = 0.001342, Final residual = 8.98215e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0060746, Final residual = 0.000418114, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00551316, Final residual = 0.000273062, No Iterations 7
+time step continuity errors : sum local = 0.00827708, global = 0.00105748, cumulative = -0.198817
+smoothSolver:  Solving for epsilon, Initial residual = 0.00133929, Final residual = 0.000113705, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00521553, Final residual = 0.000376777, No Iterations 4
+ExecutionTime = 8.09 s  ClockTime = 8 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62718 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 103
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00132745, Final residual = 8.91843e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00599138, Final residual = 0.000412577, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00548158, Final residual = 0.000271288, No Iterations 8
+time step continuity errors : sum local = 0.0082155, global = -0.00133967, cumulative = -0.200157
+smoothSolver:  Solving for epsilon, Initial residual = 0.00131285, Final residual = 0.000111479, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00511202, Final residual = 0.000369109, No Iterations 4
+ExecutionTime = 8.16 s  ClockTime = 8 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62716 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 104
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00131835, Final residual = 8.84257e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00595597, Final residual = 0.00041056, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00542885, Final residual = 0.000270881, No Iterations 7
+time step continuity errors : sum local = 0.00819095, global = 0.00109621, cumulative = -0.199061
+smoothSolver:  Solving for epsilon, Initial residual = 0.00127999, Final residual = 0.000108797, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00501518, Final residual = 0.000362109, No Iterations 4
+ExecutionTime = 8.24 s  ClockTime = 8 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62714 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 105
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00130672, Final residual = 8.78663e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00590146, Final residual = 0.000407722, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00542808, Final residual = 0.000265822, No Iterations 8
+time step continuity errors : sum local = 0.00803045, global = -0.00131383, cumulative = -0.200375
+smoothSolver:  Solving for epsilon, Initial residual = 0.00125612, Final residual = 0.000107192, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00491757, Final residual = 0.000355812, No Iterations 4
+ExecutionTime = 8.31 s  ClockTime = 8 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62713 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 106
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00129894, Final residual = 8.72065e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00590763, Final residual = 0.00040926, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00536987, Final residual = 0.000266021, No Iterations 7
+time step continuity errors : sum local = 0.00802738, global = 0.00111601, cumulative = -0.199259
+smoothSolver:  Solving for epsilon, Initial residual = 0.00122492, Final residual = 0.000104826, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00481205, Final residual = 0.000347483, No Iterations 4
+ExecutionTime = 8.39 s  ClockTime = 8 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62711 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 107
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00128738, Final residual = 8.66357e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00588128, Final residual = 0.000409057, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00533706, Final residual = 0.000257248, No Iterations 8
+time step continuity errors : sum local = 0.00775811, global = -0.00126642, cumulative = -0.200525
+smoothSolver:  Solving for epsilon, Initial residual = 0.00119586, Final residual = 0.000102294, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00470833, Final residual = 0.000339935, No Iterations 4
+ExecutionTime = 8.46 s  ClockTime = 8 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.6271 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 108
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00128114, Final residual = 8.60022e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00592802, Final residual = 0.00041359, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00526352, Final residual = 0.000257221, No Iterations 7
+time step continuity errors : sum local = 0.00775021, global = 0.00109946, cumulative = -0.199426
+smoothSolver:  Solving for epsilon, Initial residual = 0.00116559, Final residual = 9.99433e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00460734, Final residual = 0.000332906, No Iterations 4
+ExecutionTime = 8.54 s  ClockTime = 8 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62708 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 109
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00127083, Final residual = 8.54787e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00592159, Final residual = 0.000414972, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00522139, Final residual = 0.00024467, No Iterations 8
+time step continuity errors : sum local = 0.00736816, global = -0.00119382, cumulative = -0.20062
+smoothSolver:  Solving for epsilon, Initial residual = 0.00113897, Final residual = 9.7978e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00451852, Final residual = 0.000325664, No Iterations 4
+ExecutionTime = 8.61 s  ClockTime = 8 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62707 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 110
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00126593, Final residual = 8.49036e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00597449, Final residual = 0.000420257, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00514829, Final residual = 0.000244755, No Iterations 7
+time step continuity errors : sum local = 0.00736395, global = 0.00104399, cumulative = -0.199576
+smoothSolver:  Solving for epsilon, Initial residual = 0.00111005, Final residual = 9.57819e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00442296, Final residual = 0.000318395, No Iterations 4
+ExecutionTime = 8.68 s  ClockTime = 8 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62705 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 111
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00125617, Final residual = 8.44104e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.005973, Final residual = 0.000421794, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00511078, Final residual = 0.000229739, No Iterations 8
+time step continuity errors : sum local = 0.00690852, global = -0.00110669, cumulative = -0.200682
+smoothSolver:  Solving for epsilon, Initial residual = 0.00108879, Final residual = 9.34542e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00432497, Final residual = 0.000310074, No Iterations 4
+ExecutionTime = 8.76 s  ClockTime = 8 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62704 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 112
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00125063, Final residual = 8.38712e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00602547, Final residual = 0.000427016, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00503303, Final residual = 0.000230988, No Iterations 7
+time step continuity errors : sum local = 0.00694006, global = 0.000961236, cumulative = -0.199721
+smoothSolver:  Solving for epsilon, Initial residual = 0.00106692, Final residual = 9.17375e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00424205, Final residual = 0.000303328, No Iterations 4
+ExecutionTime = 8.83 s  ClockTime = 8 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62703 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 113
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00124193, Final residual = 8.34352e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00602119, Final residual = 0.000428444, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00498358, Final residual = 0.000236023, No Iterations 7
+time step continuity errors : sum local = 0.00708807, global = 0.00098302, cumulative = -0.198738
+smoothSolver:  Solving for epsilon, Initial residual = 0.00104362, Final residual = 8.93798e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00416101, Final residual = 0.000297083, No Iterations 4
+ExecutionTime = 8.91 s  ClockTime = 9 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62702 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 114
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00123439, Final residual = 8.29652e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00604401, Final residual = 0.000432106, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00493173, Final residual = 0.000224155, No Iterations 7
+time step continuity errors : sum local = 0.00672665, global = 0.000943936, cumulative = -0.197794
+smoothSolver:  Solving for epsilon, Initial residual = 0.00102013, Final residual = 8.75133e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00408539, Final residual = 0.000290777, No Iterations 4
+ExecutionTime = 8.99 s  ClockTime = 9 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.627 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 115
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00122719, Final residual = 8.25381e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00607021, Final residual = 0.000435447, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00487599, Final residual = 0.000213789, No Iterations 7
+time step continuity errors : sum local = 0.00641161, global = 0.00087807, cumulative = -0.196916
+smoothSolver:  Solving for epsilon, Initial residual = 0.00100053, Final residual = 8.53626e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00400588, Final residual = 0.000285729, No Iterations 4
+ExecutionTime = 9.07 s  ClockTime = 9 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62701 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 116
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0012215, Final residual = 8.21617e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0060887, Final residual = 0.000438573, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00484578, Final residual = 0.00020622, No Iterations 7
+time step continuity errors : sum local = 0.00618065, global = 0.000814726, cumulative = -0.196101
+smoothSolver:  Solving for epsilon, Initial residual = 0.000976886, Final residual = 8.32235e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00392588, Final residual = 0.000278287, No Iterations 4
+ExecutionTime = 9.14 s  ClockTime = 9 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62699 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 117
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00121529, Final residual = 8.18151e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00610001, Final residual = 0.000441358, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00479062, Final residual = 0.000200025, No Iterations 7
+time step continuity errors : sum local = 0.00599115, global = 0.000760088, cumulative = -0.195341
+smoothSolver:  Solving for epsilon, Initial residual = 0.000953786, Final residual = 8.13867e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00385187, Final residual = 0.000272925, No Iterations 4
+ExecutionTime = 9.23 s  ClockTime = 9 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62699 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 118
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00120895, Final residual = 8.15034e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00610827, Final residual = 0.000444006, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00472838, Final residual = 0.000194801, No Iterations 7
+time step continuity errors : sum local = 0.00583023, global = 0.000714006, cumulative = -0.194627
+smoothSolver:  Solving for epsilon, Initial residual = 0.000934075, Final residual = 7.94515e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0037858, Final residual = 0.000266749, No Iterations 4
+ExecutionTime = 9.3 s  ClockTime = 9 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62697 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 119
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00120342, Final residual = 8.12295e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00611929, Final residual = 0.000446622, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00468312, Final residual = 0.000189918, No Iterations 7
+time step continuity errors : sum local = 0.0056801, global = 0.000670766, cumulative = -0.193956
+smoothSolver:  Solving for epsilon, Initial residual = 0.000915758, Final residual = 7.76442e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00371119, Final residual = 0.000261399, No Iterations 4
+ExecutionTime = 9.38 s  ClockTime = 9 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62697 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 120
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00119853, Final residual = 8.09827e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00612967, Final residual = 0.000449003, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00462383, Final residual = 0.000185936, No Iterations 7
+time step continuity errors : sum local = 0.00555706, global = 0.000629541, cumulative = -0.193327
+smoothSolver:  Solving for epsilon, Initial residual = 0.000900093, Final residual = 7.60685e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00364621, Final residual = 0.000255165, No Iterations 4
+ExecutionTime = 9.46 s  ClockTime = 9 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62695 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 121
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00119349, Final residual = 8.07702e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00613705, Final residual = 0.000451152, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00458566, Final residual = 0.000182068, No Iterations 7
+time step continuity errors : sum local = 0.00543762, global = 0.000589538, cumulative = -0.192737
+smoothSolver:  Solving for epsilon, Initial residual = 0.000882083, Final residual = 7.41232e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00357578, Final residual = 0.000249821, No Iterations 4
+ExecutionTime = 9.53 s  ClockTime = 9 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62695 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 122
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0011887, Final residual = 8.05648e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00614562, Final residual = 0.000452966, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00454516, Final residual = 0.000178408, No Iterations 7
+time step continuity errors : sum local = 0.00532468, global = 0.000551686, cumulative = -0.192186
+smoothSolver:  Solving for epsilon, Initial residual = 0.000865504, Final residual = 7.22725e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00351092, Final residual = 0.000244262, No Iterations 4
+ExecutionTime = 9.61 s  ClockTime = 9 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62694 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 123
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00118358, Final residual = 8.03712e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00614845, Final residual = 0.000454294, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00447597, Final residual = 0.000175569, No Iterations 7
+time step continuity errors : sum local = 0.00523649, global = 0.00051787, cumulative = -0.191668
+smoothSolver:  Solving for epsilon, Initial residual = 0.000849681, Final residual = 7.09779e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00344944, Final residual = 0.000239777, No Iterations 4
+ExecutionTime = 9.68 s  ClockTime = 9 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62694 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 124
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00117833, Final residual = 8.01754e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00614774, Final residual = 0.000455308, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00442865, Final residual = 0.000173314, No Iterations 7
+time step continuity errors : sum local = 0.00516581, global = 0.000489012, cumulative = -0.191179
+smoothSolver:  Solving for epsilon, Initial residual = 0.000829199, Final residual = 6.91985e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00338199, Final residual = 0.000232815, No Iterations 4
+ExecutionTime = 9.75 s  ClockTime = 9 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62693 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 125
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00117364, Final residual = 7.99866e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00613536, Final residual = 0.000455733, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00436826, Final residual = 0.000171482, No Iterations 7
+time step continuity errors : sum local = 0.00510852, global = 0.000463224, cumulative = -0.190716
+smoothSolver:  Solving for epsilon, Initial residual = 0.000808048, Final residual = 6.7542e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00332177, Final residual = 0.000227129, No Iterations 4
+ExecutionTime = 9.82 s  ClockTime = 9 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62693 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 126
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00116829, Final residual = 7.97764e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0061223, Final residual = 0.000455831, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0043087, Final residual = 0.000169999, No Iterations 7
+time step continuity errors : sum local = 0.00506181, global = 0.000441234, cumulative = -0.190274
+smoothSolver:  Solving for epsilon, Initial residual = 0.00079536, Final residual = 6.62372e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00327509, Final residual = 0.000224064, No Iterations 4
+ExecutionTime = 9.89 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62692 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 127
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00116307, Final residual = 7.95457e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00609806, Final residual = 0.000455053, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0042455, Final residual = 0.000168743, No Iterations 7
+time step continuity errors : sum local = 0.00502225, global = 0.000420318, cumulative = -0.189854
+smoothSolver:  Solving for epsilon, Initial residual = 0.00078588, Final residual = 6.54426e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00320626, Final residual = 0.000218603, No Iterations 4
+ExecutionTime = 9.97 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62692 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 128
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00115713, Final residual = 7.92792e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00607203, Final residual = 0.000454179, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00418857, Final residual = 0.000167472, No Iterations 7
+time step continuity errors : sum local = 0.00498245, global = 0.000400974, cumulative = -0.189453
+smoothSolver:  Solving for epsilon, Initial residual = 0.000771065, Final residual = 6.37767e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00314842, Final residual = 0.000212673, No Iterations 4
+ExecutionTime = 10.04 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62691 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 129
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00115045, Final residual = 7.89584e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0060358, Final residual = 0.000452386, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00411246, Final residual = 0.000166496, No Iterations 7
+time step continuity errors : sum local = 0.00495173, global = 0.000384638, cumulative = -0.189068
+smoothSolver:  Solving for epsilon, Initial residual = 0.000758564, Final residual = 6.24829e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00309571, Final residual = 0.000209383, No Iterations 4
+ExecutionTime = 10.12 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62691 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 130
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00114384, Final residual = 7.86104e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00599254, Final residual = 0.000450059, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00407482, Final residual = 0.000165123, No Iterations 7
+time step continuity errors : sum local = 0.00490917, global = 0.000366501, cumulative = -0.188702
+smoothSolver:  Solving for epsilon, Initial residual = 0.000744508, Final residual = 6.11402e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00304232, Final residual = 0.000205164, No Iterations 4
+ExecutionTime = 10.19 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.6269 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 131
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00113673, Final residual = 7.81952e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.005944, Final residual = 0.00044749, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0040108, Final residual = 0.000171158, No Iterations 7
+time step continuity errors : sum local = 0.0050873, global = 0.000352684, cumulative = -0.188349
+smoothSolver:  Solving for epsilon, Initial residual = 0.000732517, Final residual = 5.98878e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00298756, Final residual = 0.00020236, No Iterations 4
+ExecutionTime = 10.26 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62691 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 132
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00112908, Final residual = 7.77114e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00588607, Final residual = 0.000444086, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0039617, Final residual = 0.000172927, No Iterations 7
+time step continuity errors : sum local = 0.00513867, global = 0.000333648, cumulative = -0.188016
+smoothSolver:  Solving for epsilon, Initial residual = 0.000715575, Final residual = 5.87881e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00293519, Final residual = 0.000196767, No Iterations 4
+ExecutionTime = 10.34 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62689 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 133
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00112017, Final residual = 7.71853e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00582902, Final residual = 0.000440428, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00388758, Final residual = 0.000172245, No Iterations 7
+time step continuity errors : sum local = 0.00511676, global = 0.00031786, cumulative = -0.187698
+smoothSolver:  Solving for epsilon, Initial residual = 0.000697384, Final residual = 5.73105e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00289481, Final residual = 0.000193046, No Iterations 4
+ExecutionTime = 10.41 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.6269 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 134
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0011113, Final residual = 7.66089e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00576138, Final residual = 0.000435756, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00382404, Final residual = 0.000171781, No Iterations 7
+time step continuity errors : sum local = 0.00510091, global = 0.000304783, cumulative = -0.187393
+smoothSolver:  Solving for epsilon, Initial residual = 0.000685759, Final residual = 5.638e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00285091, Final residual = 0.000188731, No Iterations 4
+ExecutionTime = 10.49 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62689 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 135
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00110137, Final residual = 7.59733e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00568485, Final residual = 0.000430212, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00378366, Final residual = 0.000171497, No Iterations 7
+time step continuity errors : sum local = 0.00509049, global = 0.000292662, cumulative = -0.1871
+smoothSolver:  Solving for epsilon, Initial residual = 0.000674909, Final residual = 5.49704e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00279935, Final residual = 0.000185573, No Iterations 4
+ExecutionTime = 10.56 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62689 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 136
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00109071, Final residual = 7.52409e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0056024, Final residual = 0.000423639, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0037331, Final residual = 0.00017165, No Iterations 7
+time step continuity errors : sum local = 0.00509301, global = 0.000281653, cumulative = -0.186819
+smoothSolver:  Solving for epsilon, Initial residual = 0.000664532, Final residual = 5.41177e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0027476, Final residual = 0.000179768, No Iterations 4
+ExecutionTime = 10.63 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62688 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 137
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00107894, Final residual = 7.44571e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00551958, Final residual = 0.000416574, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0036718, Final residual = 0.000170513, No Iterations 7
+time step continuity errors : sum local = 0.00505711, global = 0.000268548, cumulative = -0.18655
+smoothSolver:  Solving for epsilon, Initial residual = 0.000652193, Final residual = 5.27133e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00270588, Final residual = 0.000177686, No Iterations 4
+ExecutionTime = 10.71 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62689 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 138
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00106676, Final residual = 7.36134e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0054192, Final residual = 0.000407935, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00361876, Final residual = 0.000169883, No Iterations 7
+time step continuity errors : sum local = 0.00503591, global = 0.000257476, cumulative = -0.186293
+smoothSolver:  Solving for epsilon, Initial residual = 0.000637562, Final residual = 5.16725e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0026596, Final residual = 0.00017466, No Iterations 4
+ExecutionTime = 10.78 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62687 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 139
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00105383, Final residual = 7.27081e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00531152, Final residual = 0.000398285, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00355498, Final residual = 0.000169086, No Iterations 7
+time step continuity errors : sum local = 0.00500983, global = 0.000246579, cumulative = -0.186046
+smoothSolver:  Solving for epsilon, Initial residual = 0.000626581, Final residual = 5.04259e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00261462, Final residual = 0.000169846, No Iterations 4
+ExecutionTime = 10.86 s  ClockTime = 10 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62688 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 140
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00104011, Final residual = 7.17658e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0052, Final residual = 0.000388459, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00347686, Final residual = 0.000163345, No Iterations 7
+time step continuity errors : sum local = 0.00483734, global = 0.00023379, cumulative = -0.185812
+smoothSolver:  Solving for epsilon, Initial residual = 0.000611934, Final residual = 4.94293e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00256367, Final residual = 0.000166086, No Iterations 4
+ExecutionTime = 10.93 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62687 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 141
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00102561, Final residual = 7.07575e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0050827, Final residual = 0.000377376, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00338568, Final residual = 0.000160668, No Iterations 7
+time step continuity errors : sum local = 0.0047558, global = 0.000224927, cumulative = -0.185587
+smoothSolver:  Solving for epsilon, Initial residual = 0.000594955, Final residual = 4.81528e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00252366, Final residual = 0.000163457, No Iterations 4
+ExecutionTime = 11 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62688 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 142
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00101071, Final residual = 6.96948e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00493521, Final residual = 0.000365093, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00330032, Final residual = 0.000158452, No Iterations 7
+time step continuity errors : sum local = 0.00468771, global = 0.000212799, cumulative = -0.185374
+smoothSolver:  Solving for epsilon, Initial residual = 0.000582113, Final residual = 4.71776e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00248097, Final residual = 0.000160301, No Iterations 4
+ExecutionTime = 11.08 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62687 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 143
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000995292, Final residual = 6.85959e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00480103, Final residual = 0.000352562, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00322028, Final residual = 0.000154838, No Iterations 7
+time step continuity errors : sum local = 0.0045784, global = 0.000199191, cumulative = -0.185175
+smoothSolver:  Solving for epsilon, Initial residual = 0.000572047, Final residual = 4.59998e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00243865, Final residual = 0.000157488, No Iterations 4
+ExecutionTime = 11.15 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62687 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 144
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000979203, Final residual = 6.74485e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00464969, Final residual = 0.00033899, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0031353, Final residual = 0.000150798, No Iterations 7
+time step continuity errors : sum local = 0.00445636, global = 0.000185111, cumulative = -0.18499
+smoothSolver:  Solving for epsilon, Initial residual = 0.000561428, Final residual = 4.51769e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00239725, Final residual = 0.000153302, No Iterations 4
+ExecutionTime = 11.22 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62686 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 145
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000962678, Final residual = 6.62556e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00449315, Final residual = 0.00032532, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00305383, Final residual = 0.000145221, No Iterations 7
+time step continuity errors : sum local = 0.00428922, global = 0.000169616, cumulative = -0.184821
+smoothSolver:  Solving for epsilon, Initial residual = 0.000547893, Final residual = 4.38428e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00234424, Final residual = 0.000149834, No Iterations 4
+ExecutionTime = 11.29 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62687 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 146
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000945011, Final residual = 6.49958e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00432889, Final residual = 0.000310903, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00294764, Final residual = 0.000139909, No Iterations 7
+time step continuity errors : sum local = 0.00413012, global = 0.000153594, cumulative = -0.184667
+smoothSolver:  Solving for epsilon, Initial residual = 0.000535539, Final residual = 4.27876e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00230574, Final residual = 0.000146891, No Iterations 4
+ExecutionTime = 11.36 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62686 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 147
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000927478, Final residual = 6.36917e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00415646, Final residual = 0.000295903, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00286164, Final residual = 0.00013391, No Iterations 7
+time step continuity errors : sum local = 0.00395096, global = 0.000136536, cumulative = -0.18453
+smoothSolver:  Solving for epsilon, Initial residual = 0.000524619, Final residual = 4.16895e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00227155, Final residual = 0.000144398, No Iterations 4
+ExecutionTime = 11.43 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62687 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 148
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000909222, Final residual = 6.23718e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00398161, Final residual = 0.000281058, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00277131, Final residual = 0.000126787, No Iterations 7
+time step continuity errors : sum local = 0.00373883, global = 0.000114308, cumulative = -0.184416
+smoothSolver:  Solving for epsilon, Initial residual = 0.000509622, Final residual = 4.06176e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00221368, Final residual = 0.00014085, No Iterations 4
+ExecutionTime = 11.5 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62686 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 149
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000890449, Final residual = 6.09982e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00380304, Final residual = 0.000266034, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00269108, Final residual = 0.000119594, No Iterations 7
+time step continuity errors : sum local = 0.0035249, global = 9.51967e-05, cumulative = -0.184321
+smoothSolver:  Solving for epsilon, Initial residual = 0.000494298, Final residual = 3.94782e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00217341, Final residual = 0.000137853, No Iterations 4
+ExecutionTime = 11.58 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62686 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 150
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00087181, Final residual = 5.96129e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00362707, Final residual = 0.000251318, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00260479, Final residual = 0.000121354, No Iterations 7
+time step continuity errors : sum local = 0.00357492, global = -0.000164008, cumulative = -0.184485
+smoothSolver:  Solving for epsilon, Initial residual = 0.000481257, Final residual = 3.83795e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00211983, Final residual = 0.000135749, No Iterations 4
+ExecutionTime = 11.65 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62686 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 151
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000852983, Final residual = 5.81882e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00344974, Final residual = 0.000236724, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00253776, Final residual = 0.00011496, No Iterations 7
+time step continuity errors : sum local = 0.00338476, global = -0.000178121, cumulative = -0.184663
+smoothSolver:  Solving for epsilon, Initial residual = 0.000470934, Final residual = 3.72092e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00207553, Final residual = 0.000132332, No Iterations 4
+ExecutionTime = 11.72 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62686 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 152
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000833623, Final residual = 5.67586e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.003267, Final residual = 0.000222003, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00247003, Final residual = 0.000116385, No Iterations 7
+time step continuity errors : sum local = 0.00342506, global = -0.000210466, cumulative = -0.184873
+smoothSolver:  Solving for epsilon, Initial residual = 0.000459847, Final residual = 3.61549e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0020288, Final residual = 0.000130113, No Iterations 4
+ExecutionTime = 11.8 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 153
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000813668, Final residual = 5.53024e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00309479, Final residual = 0.000207832, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00239889, Final residual = 0.000118454, No Iterations 7
+time step continuity errors : sum local = 0.00348453, global = -0.000237322, cumulative = -0.185111
+smoothSolver:  Solving for epsilon, Initial residual = 0.000447764, Final residual = 3.50903e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0019878, Final residual = 0.000127005, No Iterations 4
+ExecutionTime = 11.88 s  ClockTime = 11 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62686 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 154
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000793672, Final residual = 5.38113e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00293122, Final residual = 0.000194596, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00233058, Final residual = 9.33033e-05, No Iterations 8
+time step continuity errors : sum local = 0.00274384, global = 0.000122843, cumulative = -0.184988
+smoothSolver:  Solving for epsilon, Initial residual = 0.000436509, Final residual = 3.4093e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00193855, Final residual = 0.000123104, No Iterations 4
+ExecutionTime = 11.95 s  ClockTime = 12 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 155
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000773697, Final residual = 5.23045e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00277526, Final residual = 0.000182576, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00225668, Final residual = 9.20847e-05, No Iterations 8
+time step continuity errors : sum local = 0.00270741, global = 0.000139894, cumulative = -0.184848
+smoothSolver:  Solving for epsilon, Initial residual = 0.00042619, Final residual = 3.30213e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0018958, Final residual = 0.000121431, No Iterations 4
+ExecutionTime = 12.02 s  ClockTime = 12 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62686 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 156
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000753644, Final residual = 5.08223e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0026241, Final residual = 0.000171155, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00220326, Final residual = 9.23963e-05, No Iterations 8
+time step continuity errors : sum local = 0.00271605, global = 0.000154985, cumulative = -0.184693
+smoothSolver:  Solving for epsilon, Initial residual = 0.000411537, Final residual = 3.19971e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00184204, Final residual = 0.000117502, No Iterations 4
+ExecutionTime = 12.1 s  ClockTime = 12 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 157
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00073322, Final residual = 4.93195e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0024959, Final residual = 0.000161285, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00213739, Final residual = 9.22922e-05, No Iterations 8
+time step continuity errors : sum local = 0.00271267, global = 0.000164117, cumulative = -0.184529
+smoothSolver:  Solving for epsilon, Initial residual = 0.000395924, Final residual = 3.09223e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00179057, Final residual = 0.000114478, No Iterations 4
+ExecutionTime = 12.17 s  ClockTime = 12 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62686 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 158
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000712899, Final residual = 4.7798e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00238171, Final residual = 0.000152946, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00207726, Final residual = 9.20565e-05, No Iterations 8
+time step continuity errors : sum local = 0.00270554, global = 0.000171557, cumulative = -0.184357
+smoothSolver:  Solving for epsilon, Initial residual = 0.00038382, Final residual = 2.99798e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0017333, Final residual = 0.000110952, No Iterations 4
+ExecutionTime = 12.25 s  ClockTime = 12 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 159
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000691935, Final residual = 4.62616e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00228356, Final residual = 0.000146246, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00200733, Final residual = 9.13774e-05, No Iterations 8
+time step continuity errors : sum local = 0.00268562, global = 0.000178828, cumulative = -0.184179
+smoothSolver:  Solving for epsilon, Initial residual = 0.000373639, Final residual = 2.89113e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00168341, Final residual = 0.000108048, No Iterations 4
+ExecutionTime = 12.33 s  ClockTime = 12 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 160
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000670799, Final residual = 4.47449e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00219799, Final residual = 0.000140728, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00195446, Final residual = 9.06575e-05, No Iterations 8
+time step continuity errors : sum local = 0.00266459, global = 0.000183971, cumulative = -0.183995
+smoothSolver:  Solving for epsilon, Initial residual = 0.000362337, Final residual = 2.79582e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00163385, Final residual = 0.000105158, No Iterations 4
+ExecutionTime = 12.4 s  ClockTime = 12 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 161
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00064967, Final residual = 4.32496e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00212828, Final residual = 0.000136438, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00190351, Final residual = 8.94454e-05, No Iterations 8
+time step continuity errors : sum local = 0.00262931, global = 0.000185953, cumulative = -0.183809
+smoothSolver:  Solving for epsilon, Initial residual = 0.000351525, Final residual = 2.6908e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00158886, Final residual = 0.000102777, No Iterations 4
+ExecutionTime = 12.48 s  ClockTime = 12 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 162
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000629023, Final residual = 4.17818e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00207334, Final residual = 0.000133481, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00185547, Final residual = 8.8019e-05, No Iterations 8
+time step continuity errors : sum local = 0.00258777, global = 0.000185701, cumulative = -0.183623
+smoothSolver:  Solving for epsilon, Initial residual = 0.000340571, Final residual = 2.59633e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00153788, Final residual = 9.97519e-05, No Iterations 4
+ExecutionTime = 12.55 s  ClockTime = 12 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 163
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000608992, Final residual = 4.03526e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00203082, Final residual = 0.000131176, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00180789, Final residual = 8.64263e-05, No Iterations 8
+time step continuity errors : sum local = 0.00254162, global = 0.000185145, cumulative = -0.183438
+smoothSolver:  Solving for epsilon, Initial residual = 0.000330839, Final residual = 2.49543e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00149678, Final residual = 9.75312e-05, No Iterations 4
+ExecutionTime = 12.63 s  ClockTime = 12 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 164
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000589153, Final residual = 3.89706e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00198785, Final residual = 0.00012915, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00177799, Final residual = 8.48651e-05, No Iterations 8
+time step continuity errors : sum local = 0.00249634, global = 0.000183578, cumulative = -0.183254
+smoothSolver:  Solving for epsilon, Initial residual = 0.000316376, Final residual = 2.39833e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00144809, Final residual = 9.42064e-05, No Iterations 4
+ExecutionTime = 12.71 s  ClockTime = 12 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 165
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000569243, Final residual = 3.76162e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00194646, Final residual = 0.000127254, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00172298, Final residual = 8.29469e-05, No Iterations 8
+time step continuity errors : sum local = 0.00244076, global = 0.000182141, cumulative = -0.183072
+smoothSolver:  Solving for epsilon, Initial residual = 0.000302781, Final residual = 2.29726e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00140693, Final residual = 9.18208e-05, No Iterations 4
+ExecutionTime = 12.78 s  ClockTime = 12 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 166
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000550358, Final residual = 3.63057e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00190349, Final residual = 0.000125366, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00167401, Final residual = 8.10255e-05, No Iterations 8
+time step continuity errors : sum local = 0.00238501, global = 0.000179087, cumulative = -0.182893
+smoothSolver:  Solving for epsilon, Initial residual = 0.000291732, Final residual = 2.21182e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0013627, Final residual = 8.89548e-05, No Iterations 4
+ExecutionTime = 12.86 s  ClockTime = 12 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 167
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000531716, Final residual = 3.50267e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00186502, Final residual = 0.000123483, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00163713, Final residual = 7.90544e-05, No Iterations 8
+time step continuity errors : sum local = 0.00232792, global = 0.000175911, cumulative = -0.182717
+smoothSolver:  Solving for epsilon, Initial residual = 0.000283936, Final residual = 2.11232e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00132482, Final residual = 8.65695e-05, No Iterations 4
+ExecutionTime = 12.93 s  ClockTime = 13 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 168
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000513346, Final residual = 3.37855e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00182503, Final residual = 0.000121514, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0015963, Final residual = 7.72278e-05, No Iterations 8
+time step continuity errors : sum local = 0.00227506, global = 0.000172297, cumulative = -0.182545
+smoothSolver:  Solving for epsilon, Initial residual = 0.00027462, Final residual = 2.02949e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00128174, Final residual = 8.38463e-05, No Iterations 4
+ExecutionTime = 13.01 s  ClockTime = 13 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 169
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00049547, Final residual = 3.2582e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00178843, Final residual = 0.000119516, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00155714, Final residual = 7.52012e-05, No Iterations 8
+time step continuity errors : sum local = 0.00221641, global = 0.00016882, cumulative = -0.182376
+smoothSolver:  Solving for epsilon, Initial residual = 0.000266694, Final residual = 1.94453e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0012427, Final residual = 8.16816e-05, No Iterations 4
+ExecutionTime = 13.09 s  ClockTime = 13 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 170
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000478183, Final residual = 3.14308e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00175063, Final residual = 0.000117385, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00150865, Final residual = 7.33276e-05, No Iterations 8
+time step continuity errors : sum local = 0.00216213, global = 0.000164915, cumulative = -0.182211
+smoothSolver:  Solving for epsilon, Initial residual = 0.000257832, Final residual = 1.86385e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00120226, Final residual = 7.9695e-05, No Iterations 4
+ExecutionTime = 13.16 s  ClockTime = 13 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 171
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000461719, Final residual = 3.03156e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00171374, Final residual = 0.000115135, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00147532, Final residual = 7.135e-05, No Iterations 8
+time step continuity errors : sum local = 0.00210479, global = 0.000161003, cumulative = -0.18205
+smoothSolver:  Solving for epsilon, Initial residual = 0.000251228, Final residual = 1.78e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0011676, Final residual = 7.745e-05, No Iterations 4
+ExecutionTime = 13.25 s  ClockTime = 13 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 172
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000445733, Final residual = 2.92411e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00167449, Final residual = 0.000112701, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00143727, Final residual = 6.95654e-05, No Iterations 8
+time step continuity errors : sum local = 0.00205299, global = 0.000156987, cumulative = -0.181893
+smoothSolver:  Solving for epsilon, Initial residual = 0.000239057, Final residual = 1.711e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00113222, Final residual = 7.58598e-05, No Iterations 4
+ExecutionTime = 13.32 s  ClockTime = 13 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 173
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000430311, Final residual = 2.82076e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00163531, Final residual = 0.000110156, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00140683, Final residual = 6.76944e-05, No Iterations 8
+time step continuity errors : sum local = 0.00199865, global = 0.000153413, cumulative = -0.18174
+smoothSolver:  Solving for epsilon, Initial residual = 0.000228773, Final residual = 1.63447e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00109883, Final residual = 7.32536e-05, No Iterations 4
+ExecutionTime = 13.4 s  ClockTime = 13 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 174
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000415024, Final residual = 2.72048e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0015927, Final residual = 0.000107463, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00136488, Final residual = 6.59248e-05, No Iterations 8
+time step continuity errors : sum local = 0.00194717, global = 0.000150563, cumulative = -0.181589
+smoothSolver:  Solving for epsilon, Initial residual = 0.000220482, Final residual = 1.56923e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00106559, Final residual = 7.13965e-05, No Iterations 4
+ExecutionTime = 13.47 s  ClockTime = 13 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 175
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000400747, Final residual = 2.62368e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00155135, Final residual = 0.000104641, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00133253, Final residual = 6.40248e-05, No Iterations 8
+time step continuity errors : sum local = 0.00189184, global = 0.000147721, cumulative = -0.181441
+smoothSolver:  Solving for epsilon, Initial residual = 0.000216416, Final residual = 1.50649e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00103427, Final residual = 6.96191e-05, No Iterations 4
+ExecutionTime = 13.54 s  ClockTime = 13 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 176
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000386822, Final residual = 2.52986e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00150623, Final residual = 0.000101647, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00128964, Final residual = 6.23008e-05, No Iterations 8
+time step continuity errors : sum local = 0.00184159, global = 0.000144181, cumulative = -0.181297
+smoothSolver:  Solving for epsilon, Initial residual = 0.000209529, Final residual = 1.44694e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.00100231, Final residual = 6.7994e-05, No Iterations 4
+ExecutionTime = 13.62 s  ClockTime = 13 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 177
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000373134, Final residual = 2.43891e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00146142, Final residual = 9.85113e-05, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00125869, Final residual = 6.0485e-05, No Iterations 8
+time step continuity errors : sum local = 0.00178861, global = 0.000141226, cumulative = -0.181156
+smoothSolver:  Solving for epsilon, Initial residual = 0.000204296, Final residual = 1.39071e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.000973672, Final residual = 6.61249e-05, No Iterations 4
+ExecutionTime = 13.69 s  ClockTime = 13 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 178
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000359988, Final residual = 2.35078e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00141376, Final residual = 9.52639e-05, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00122658, Final residual = 5.88216e-05, No Iterations 8
+time step continuity errors : sum local = 0.00174, global = 0.000138065, cumulative = -0.181018
+smoothSolver:  Solving for epsilon, Initial residual = 0.000198024, Final residual = 1.33465e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.000942266, Final residual = 6.45127e-05, No Iterations 4
+ExecutionTime = 13.77 s  ClockTime = 13 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 179
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000347267, Final residual = 2.26532e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00136748, Final residual = 9.19526e-05, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00119631, Final residual = 5.70929e-05, No Iterations 8
+time step continuity errors : sum local = 0.00168944, global = 0.000135462, cumulative = -0.180882
+smoothSolver:  Solving for epsilon, Initial residual = 0.000194032, Final residual = 1.27791e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.000919676, Final residual = 6.29889e-05, No Iterations 4
+ExecutionTime = 13.84 s  ClockTime = 13 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 180
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000334802, Final residual = 2.18239e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00131722, Final residual = 8.85089e-05, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00115797, Final residual = 5.54585e-05, No Iterations 8
+time step continuity errors : sum local = 0.00164154, global = 0.000132202, cumulative = -0.18075
+smoothSolver:  Solving for epsilon, Initial residual = 0.000184568, Final residual = 1.23218e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.000890658, Final residual = 6.14643e-05, No Iterations 4
+ExecutionTime = 13.92 s  ClockTime = 14 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 181
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000322667, Final residual = 2.10164e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00126892, Final residual = 8.50517e-05, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00112182, Final residual = 5.35872e-05, No Iterations 8
+time step continuity errors : sum local = 0.00158661, global = 0.000129506, cumulative = -0.180621
+smoothSolver:  Solving for epsilon, Initial residual = 0.000176414, Final residual = 1.18389e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.000864181, Final residual = 5.99872e-05, No Iterations 4
+ExecutionTime = 13.98 s  ClockTime = 14 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 182
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000310398, Final residual = 2.02167e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00121783, Final residual = 8.1472e-05, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00107993, Final residual = 5.18614e-05, No Iterations 8
+time step continuity errors : sum local = 0.00153586, global = 0.000125781, cumulative = -0.180495
+smoothSolver:  Solving for epsilon, Initial residual = 0.000170666, Final residual = 1.14253e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.000836735, Final residual = 5.8541e-05, No Iterations 4
+ExecutionTime = 14.04 s  ClockTime = 14 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 183
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000298509, Final residual = 1.94362e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00117021, Final residual = 7.79282e-05, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00104486, Final residual = 5.00333e-05, No Iterations 8
+time step continuity errors : sum local = 0.00148207, global = 0.000122503, cumulative = -0.180372
+smoothSolver:  Solving for epsilon, Initial residual = 0.000168563, Final residual = 1.09728e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.000810835, Final residual = 5.70142e-05, No Iterations 4
+ExecutionTime = 14.11 s  ClockTime = 14 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 184
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000286933, Final residual = 1.86687e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00112134, Final residual = 7.43904e-05, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00100547, Final residual = 4.83689e-05, No Iterations 8
+time step continuity errors : sum local = 0.00143302, global = 0.000118976, cumulative = -0.180253
+smoothSolver:  Solving for epsilon, Initial residual = 0.000163826, Final residual = 1.06022e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.000785207, Final residual = 5.55517e-05, No Iterations 4
+ExecutionTime = 14.19 s  ClockTime = 14 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62683 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 185
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000275717, Final residual = 1.79201e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0010751, Final residual = 7.08953e-05, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0009741, Final residual = 4.67361e-05, No Iterations 8
+time step continuity errors : sum local = 0.00138489, global = 0.000116064, cumulative = -0.180137
+smoothSolver:  Solving for epsilon, Initial residual = 0.000160498, Final residual = 1.01517e-05, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.000763144, Final residual = 5.39284e-05, No Iterations 4
+ExecutionTime = 14.25 s  ClockTime = 14 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 186
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000264852, Final residual = 1.71922e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.00102729, Final residual = 6.73984e-05, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.000935284, Final residual = 4.51056e-05, No Iterations 8
+time step continuity errors : sum local = 0.00133674, global = 0.000112758, cumulative = -0.180025
+smoothSolver:  Solving for epsilon, Initial residual = 0.00015615, Final residual = 9.88339e-06, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.000736242, Final residual = 5.24506e-05, No Iterations 4
+ExecutionTime = 14.32 s  ClockTime = 14 s
+
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62684 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+Time = 187
+
+smoothSolver:  Solving for Ux, Initial residual = 0.000254263, Final residual = 1.6481e-05, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.000982656, Final residual = 6.40604e-05, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00090517, Final residual = 4.34705e-05, No Iterations 8
+time step continuity errors : sum local = 0.00128846, global = 0.000110238, cumulative = -0.179914
+smoothSolver:  Solving for epsilon, Initial residual = 0.000153844, Final residual = 9.4459e-06, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.000714845, Final residual = 5.10737e-05, No Iterations 4
+ExecutionTime = 14.39 s  ClockTime = 14 s
+
+
+SIMPLE solution converged in 187 iterations
+
+streamLine streamlines write:
+    seeded 10 particles
+    Tracks:10
+    Total samples:10767
+fieldMinMax minMax write:
+    min(mag(U)) = 0 in cell 522 at location (-0.0198086 0.0254 -1.47343e-21)
+    max(mag(U)) = 6.62685 in cell 89 at location (-0.000395709 0.00162971 -5.03334e-21)
+
+End
+

@@ -1,0 +1,66 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    p
+    {
+        solver          GAMG;
+        tolerance       1e-06; //1e-010;  // showing it used more iterations when increases
+        relTol          0.05; //0.0001;
+        smoother        GaussSeidel;
+        //minIter		1;  // don't really need minIter for most cases
+        //maxIter		60; // maximum number of iterations
+    }
+
+    "(U|k|epsilon|omega|f|v2)"
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-08; //1e-05;
+        relTol          0.1;
+    }
+}
+
+SIMPLE
+{
+    nNonOrthogonalCorrectors 0;
+    consistent      no;
+
+    residualControl
+    {
+        p               1e-2;
+        U               1e-3;
+        "(k|epsilon|omega|f|v2)" 1e-3;
+    }
+}
+
+relaxationFactors
+{
+//fields needs to be added if consistent is no. U and ".*" also needs to be changed to 0.7 for each
+	fields
+	{
+		p	0.3;
+	}
+	    equations
+	    {
+		U               0.7; //0.9; // 0.9 is more stable but 0.95 more convergent
+		".*"            0.7; //0.9; // 0.9 is more stable but 0.95 more convergent
+	    }
+}
+
+
+// ************************************************************************* //

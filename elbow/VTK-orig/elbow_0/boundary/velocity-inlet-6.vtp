@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<!-- patch='velocity-inlet-6' time='constant' index='0' -->
+<VTKFile type='PolyData' version='0.1' byte_order='LittleEndian' header_type='UInt64'>
+  <PolyData>
+    <FieldData>
+      <DataArray type='Float32' Name='TimeValue' NumberOfTuples='1' format='binary'>
+BAAAAAAAAAAAAAAA
+      </DataArray>
+    </FieldData>
+    <Piece NumberOfPoints='10' NumberOfPolys='4'>
+      <Points>
+        <DataArray type='Float32' Name='Points' NumberOfComponents='3' format='binary'>
+eAAAAAAAAAAuKFZCrDuRwJ4PcD8uKFJCrDuRwJ4PcD8uKFJCrDuRwJ4PcL8uKFZCrDuRwJ4PcL8uKGJCrDuRwJ4PcD8uKF5CrDuRwJ4PcD8uKF5CrDuRwJ4PcL8uKGJCrDuRwJ4PcL8uKFpCrDuRwJ4PcD8uKFpCrDuRwJ4PcL8=
+        </DataArray>
+      </Points>
+      <Polys>
+        <DataArray type='Int32' Name='connectivity' format='binary'>
+QAAAAAAAAAAAAAAAAQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAUAAAAIAAAACQAAAAYAAAAIAAAAAAAAAAMAAAAJAAAA
+        </DataArray>
+        <DataArray type='Int32' Name='offsets' format='binary'>
+EAAAAAAAAAAEAAAACAAAAAwAAAAQAAAA
+        </DataArray>
+      </Polys>
+      <CellData>
+        <DataArray type='Int32' Name='patchID' format='binary'>
+EAAAAAAAAAACAAAAAgAAAAIAAAACAAAA
+        </DataArray>
+      </CellData>
+    </Piece>
+  </PolyData>
+</VTKFile>

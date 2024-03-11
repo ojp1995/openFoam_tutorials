@@ -1,0 +1,5 @@
+# y+ ()       
+# Time        	patch         	min           	max           	average       
+1             	leftWall	1.068362e+01	8.975274e+01	4.530985e+01
+1             	rightWall	7.971254e+00	8.128563e+01	2.975116e+01
+1             	lowerWall	4.396082e+00	3.582600e+01	2.088418e+01
